@@ -1,6 +1,6 @@
 # hue-remote
 
-Hue remote built with an ESP8266.
+Hue remote built with an ESP8266. Documentation is at https://arduino-esp8266.readthedocs.io. 
 
 ## Setup instructions
 
