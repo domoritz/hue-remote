@@ -1,6 +1,6 @@
 #include <ESP8266WiFi.h>
 
-#include "connection.ino"
+#include "connection.h"
 
 #define ESP8266_LED 5
 
