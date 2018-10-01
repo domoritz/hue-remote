@@ -2,7 +2,7 @@
 
 #include "connection.h"
 
-#define ESP8266_LED 5
+const uint8_t ESP8266_LED = 5;
 
 
 void setup() {
@@ -58,7 +58,7 @@ void loop() {
   String command; 
   
   if (on) {
-    command = "{\"on\": true, \"transitiontime\": 20, \"bri\": 254, \"hue\": 0, \"sat\": 254}";
+    command = "{\"on\": true, \"transitiontime\": 20, \"bri\": 254, \"hue\": 10000, \"sat\": 254}";
   
     digitalWrite(ESP8266_LED, HIGH);
   } else {
