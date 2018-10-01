@@ -2,8 +2,13 @@
 
 #include "connection.h"
 
+// Constants
 const uint8_t ESP8266_LED = 5;
 
+// Variables
+volatile uint8_t brightness = 254;
+volatile uint16_t hue = 0;
+volatile uint8_t sat = 254;
 
 void setup() {
   pinMode(ESP8266_LED, OUTPUT);
@@ -58,7 +63,11 @@ void loop() {
   String command; 
   
   if (on) {
-    command = "{\"on\": true, \"transitiontime\": 20, \"bri\": 254, \"hue\": 10000, \"sat\": 254}";
+    command = String("{\"on\": true, \"transitiontime\": 20") +
+               ", \"bri\": " + brightness +
+               ", \"hue\": " + hue +
+               ", \"sat\": " + sat +
+               "}";
   
     digitalWrite(ESP8266_LED, HIGH);
   } else {
